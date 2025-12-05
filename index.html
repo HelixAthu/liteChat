@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penPal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+<div id="contentWrapper">
+    <!--mainWrapper start-->
+    <div id="mainContentWrapper">
+        <div id="headerWrapper">
+            <h2>Penpal</h2>
+            <span id="notificationIcon" onclick="notify()"></span>
+        </div>
+        <div id="storyWrapper">
+            <div class="stories" id="userStory"></div>
+        </div>
+        <div id="feedWrapper">
+            <div class="card" id="card1">
+                <section class="cardHeader">
+                    <span class="feedThumbnails" id="feedThumbnail1"></span>
+                    <h4>Athu</h4>
+                </section>
+                     <section class="cardImages" id="cardImage1"></section>
+                     <section class="cardFooter">
+                        <span class="cardFooterIcons" id="heartIcon1" onclick="changeIcon(1, 'heart')"></span>
+                        <span class="cardFooterIcons"></span>
+                        <span class="cardFooterIcons" onclick="changeIcon(1, 'save')" id="saveIcon1"></span>
+                    </section>
+            </div>
+        </div>
+
+        </div>
+        <!--mainWrapper end-->
+
+        <!--profileWrapper start-->
+        <div id="profileContent" class="hiddenElements">
+            <div id="profileIconWrapper">
+                <img src="assets/profileIcon.jpg" alt="profilePic">
+            </div>
+            <h1>Admin</h1>
+        </div>
+        <!--profileWrapper end-->
+
+        <!--chatWrapper start-->
+        <div id="chatContent" class="hiddenElements">
+            <h1>Chats</h1>
+        </div>
+        <!--chatWrapper end-->
+
+        <!--searchWrapper start-->
+        <div id="searchContent" class="hiddenElements">
+            <input type="search" placeholder="search" id="searchInput" onkeyup="search()">
+        </div>
+        <!--searchWrapper end-->
+    </div>
+</div>
+
+<nav>
+    <span class="navIcon" onclick="navBtnClick('home')"></span>
+    <span class="navIcon" onclick="navBtnClick('search')"></span>
+    <span class="navIcon" onclick="navBtnClick('chat')"></span>
+    <span class="navIcon" onclick="navBtnClick('profile')"></span>
+</nav>
+</main>
+
+    
+<script src="app.js"></script>
+
+</body>
+
+</html>
